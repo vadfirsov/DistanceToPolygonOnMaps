@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA1C82632266FA0000461F22 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1C82622266FA0000461F22 /* MapKit.framework */; };
+		DA1C827822670F4C00461F22 /* KMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1C827722670F4C00461F22 /* KMLParser.m */; };
+		DA1C827B2267108300461F22 /* Allowed area.kml in Resources */ = {isa = PBXBuildFile; fileRef = DA1C827A2267108300461F22 /* Allowed area.kml */; };
 		DA92A99B2266F94400CB7A76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA92A99A2266F94400CB7A76 /* AppDelegate.swift */; };
 		DA92A99D2266F94400CB7A76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA92A99C2266F94400CB7A76 /* ViewController.swift */; };
 		DA92A9A02266F94400CB7A76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA92A99E2266F94400CB7A76 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 
 /* Begin PBXFileReference section */
 		DA1C82622266FA0000461F22 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DA1C827622670F4B00461F22 /* DistanceToPolygonOnMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DistanceToPolygonOnMaps-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA1C827722670F4C00461F22 /* KMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMLParser.m; sourceTree = "<group>"; };
+		DA1C827922670F8900461F22 /* KMLParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLParser.h; sourceTree = "<group>"; };
+		DA1C827A2267108300461F22 /* Allowed area.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Allowed area.kml"; sourceTree = "<group>"; };
 		DA92A9972266F94400CB7A76 /* DistanceToPolygonOnMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistanceToPolygonOnMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA92A99A2266F94400CB7A76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA92A99C2266F94400CB7A76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +73,11 @@
 			isa = PBXGroup;
 			children = (
 				DA92A99A2266F94400CB7A76 /* AppDelegate.swift */,
+				DA1C827A2267108300461F22 /* Allowed area.kml */,
 				DA92A99C2266F94400CB7A76 /* ViewController.swift */,
+				DA1C827722670F4C00461F22 /* KMLParser.m */,
+				DA1C827922670F8900461F22 /* KMLParser.h */,
+				DA1C827622670F4B00461F22 /* DistanceToPolygonOnMaps-Bridging-Header.h */,
 				DA92A99E2266F94400CB7A76 /* Main.storyboard */,
 				DA92A9A12266F94500CB7A76 /* Assets.xcassets */,
 				DA92A9A32266F94500CB7A76 /* LaunchScreen.storyboard */,
@@ -108,6 +118,7 @@
 				TargetAttributes = {
 					DA92A9962266F94400CB7A76 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -137,6 +148,7 @@
 				DA92A9A52266F94500CB7A76 /* LaunchScreen.storyboard in Resources */,
 				DA92A9A22266F94500CB7A76 /* Assets.xcassets in Resources */,
 				DA92A9A02266F94400CB7A76 /* Main.storyboard in Resources */,
+				DA1C827B2267108300461F22 /* Allowed area.kml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA92A99D2266F94400CB7A76 /* ViewController.swift in Sources */,
+				DA1C827822670F4C00461F22 /* KMLParser.m in Sources */,
 				DA92A99B2266F94400CB7A76 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QLK6ZXZ8V;
 				INFOPLIST_FILE = DistanceToPolygonOnMaps/Info.plist;
@@ -303,6 +317,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadimfirsov.DistanceToPolygonOnMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DistanceToPolygonOnMaps/DistanceToPolygonOnMaps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QLK6ZXZ8V;
 				INFOPLIST_FILE = DistanceToPolygonOnMaps/Info.plist;
@@ -321,6 +338,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadimfirsov.DistanceToPolygonOnMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DistanceToPolygonOnMaps/DistanceToPolygonOnMaps-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
